@@ -32,6 +32,10 @@ button{
     outline: 0;
     border: 0;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .container{
    height: 100vh;
     width: 85%;
@@ -40,11 +44,13 @@ button{
     justify-content: center;
     align-items: center;
 }
-.card{
-  
+.flex{
+
+}
+#card-el{
     padding: 1.3rem;
     height: 325px;
-    width: 375px;
+    width: 320px;
     background: rgb(37,45,55);
     background: radial-gradient(circle at top, rgba(37,45,55,1) 15%, rgba(18,20,23,1) 100%); 
     border-radius: 1rem;
@@ -55,11 +61,25 @@ button{
     display: flex;
     flex-flow: wrap column;
     justify-content: space-around;
+    align-items: center;
 }
-.card img{
+
+#card-el img.star{
+    height: auto;
+    width: auto;
     color: inherit;
     margin: 0;
     padding: .8rem;
+  
+}
+.max-width{
+   
+    width: 100%;
+}
+.illus-thankyou{
+    height: auto;
+    width: 8rem;
+    align-self: center;
 }
 .msg{
     color:var(--Light-Grey);
@@ -76,7 +96,7 @@ button{
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
-    
+    width: 100%;
 }
 .ratings button{
     color: inherit;
@@ -84,7 +104,12 @@ button{
     height: 2.5rem;
 
 }
-#submitEl{
+.ratings button:hover{
+    color: var(--White);
+    background-color: var(--Orange);
+}
+#submit-el{
+    
     text-transform:uppercase;
     font-weight: 700;
     width: 100%;
@@ -97,4 +122,8 @@ button{
     -ms-border-radius: 1.5rem;
     -o-border-radius: 1.5rem;
     background-color: var(--Orange)
+}
+#submit-el:hover{
+    color: var(--Orange);
+    background-color: var(--White);
 }
