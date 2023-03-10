@@ -4,33 +4,54 @@ const titleEl = document.getElementById("title-el");
 const descriptionEl = document.getElementById("description-el");
 const cardEl = document.getElementById("card-el");
 const submitEl = document.getElementById("submit-el");
-let rateBtnsEl = document.getElementsByClassName("rate-btns");
-rateBtnsEl.addEventListener('click', function (event) {
-    console.log("hello")
-})
-submitEl.addEventListener("click", function () {
-    view.renderThankYouPage();
-})
-
-
+let rateSelectorEl = document.getElementById("rate-selector-el");
 
 
 let view = {
-   renderThankYouPage(){
+   renderThankYouPage( rating){
     cardEl.innerHTML= `<div>   <img class="illus-thankyou" src="../images/illustration-thank-you.svg" alt=""></div>
-    <div><p>You selected  out of 5 </p></div>
+    <div><p>You selected ${rating} out of 5 </p></div>
     <h1 id="title-el">Thank you!</h1>
 
    <p class="msg"> We appreciate you taking the time to give a rating. If you ever need more support, 
     don’t hesitate to get in touch! </p>`
+   },
+   higlightBtn(target){
+    if(model.selectedBtn){
+        model.selectedBtn.classList.remove('highlight')
+    }
+    model.setSelectedBtn(target);
+    model.selectedBtn.classList.add('highlight')
    }
 }
 let model = {
-
-}
+    rating : 0,
+    selectedBtn : null,
+    setRating(rating){
+        this.rating = rating;
+    },
+    setSelectedBtn(btn){
+        this.selectedBtn = btn;
+    }
+};
 let controller = {
+    eventListen(){
+        submitEl.addEventListener("click", function () {
+            view.renderThankYouPage(model.rating);
+        });
 
-}
+        rateSelectorEl.addEventListener('click', function (event) {
+            const target = event.target;
+            if(target.tagName != "BUTTON"){
+                return;
+            }
+            model.setRating(target.value);
+            view.higlightBtn(target);
+        });
+
+    }
+};
+controller.eventListen();
 
 }
 window.onload = init();

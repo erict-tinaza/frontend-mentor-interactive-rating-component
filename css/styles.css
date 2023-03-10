@@ -44,9 +44,7 @@ a{
     justify-content: center;
     align-items: center;
 }
-.flex{
 
-}
 #card-el{
     padding: 1.3rem;
     height: 325px;
@@ -92,19 +90,19 @@ a{
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
 }
-.ratings{
+.rate-btns{
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
     width: 100%;
 }
-.ratings button{
+.rate-btns button{
     color: inherit;
     width: 2.5rem;
     height: 2.5rem;
 
 }
-.ratings button:hover{
+.rate-btns button:hover{
     color: var(--White);
     background-color: var(--Orange);
 }
@@ -126,4 +124,8 @@ a{
 #submit-el:hover{
     color: var(--Orange);
     background-color: var(--White);
+}
+.highlight{
+    background-color: var(--Orange);
+    color: var(--White);
 }
