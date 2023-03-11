@@ -10,7 +10,7 @@ let rateSelectorEl = document.getElementById("rate-selector-el");
 
 let view = {
    renderThankYouPage( rating){
-    cardEl.innerHTML= `<div>   <img class="illus-thankyou" src="../images/illustration-thank-you.svg" alt=""></div>
+    cardEl.innerHTML= `<div>   <img class="illus-thankyou" src="images/illustration-thank-you.svg" alt=""></div>
     <div class="rating-msg"><p>You selected ${rating} out of 5 </p></div>
     <h1 id="title-el">Thank you!</h1>
 
