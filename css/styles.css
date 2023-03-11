@@ -24,6 +24,7 @@ body{
     font-family: 'Overpass', sans-serif;
     background-color: var(--Very-Dark-Blue);
     color: var(--White);
+    font-size: .9rem;
 }
 h1{
     font-size: 1.6rem;
@@ -128,4 +129,14 @@ a{
 .highlight{
     background-color: var(--Orange);
     color: var(--White);
+}
+.rating-msg{
+    color: var(--Orange);
+    padding: .7rem;
+    background-color: var(--Dark-Blue);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
