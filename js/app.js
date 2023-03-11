@@ -7,10 +7,11 @@ const submitEl = document.getElementById("submit-el");
 let rateSelectorEl = document.getElementById("rate-selector-el");
 
 
+
 let view = {
    renderThankYouPage( rating){
     cardEl.innerHTML= `<div>   <img class="illus-thankyou" src="../images/illustration-thank-you.svg" alt=""></div>
-    <div><p>You selected ${rating} out of 5 </p></div>
+    <div class="rating-msg"><p>You selected ${rating} out of 5 </p></div>
     <h1 id="title-el">Thank you!</h1>
 
    <p class="msg"> We appreciate you taking the time to give a rating. If you ever need more support, 
@@ -36,22 +37,29 @@ let model = {
 };
 let controller = {
     eventListen(){
-        submitEl.addEventListener("click", function () {
-            view.renderThankYouPage(model.rating);
-        });
-
         rateSelectorEl.addEventListener('click', function (event) {
             const target = event.target;
+
             if(target.tagName != "BUTTON"){
                 return;
             }
             model.setRating(target.value);
             view.higlightBtn(target);
         });
+        submitEl.addEventListener("click", function () {
+            if(model.rating != 0){
+                view.renderThankYouPage(model.rating);
+                return;
+            };
+            alert("Please select a rating score!");
+            
+        });
 
     }
 };
 controller.eventListen();
+
+
 
 }
 window.onload = init();
