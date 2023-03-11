@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- I remove the relative path for the css file because github pages has trouble loading it -->
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- I remove the relative path for the css file because github pages has trouble loading it -->
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-   
-  </style>
-</head>
-<body>
+  <body>
+    <!-- Rating state start -->
 
-  <!-- Rating state start -->
+    <div class="container">
+      <div id="card-el">
+        <div class="max-width">
+          <img class="circle star" src="images/icon-star.svg" alt="" />
+        </div>
+        <div class="max-width">
+          <h1 id="title-el">How did we do?</h1>
+        </div>
+        <div class="max-width">
+          <p class="msg" id="description-el">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <div id="rate-selector-el" class="rate-btns">
+          <div><button class="circle" value="1">1</button></div>
+          <div><button class="circle" value="2">2</button></div>
+          <div><button class="circle" value="3">3</button></div>
+          <div><button class="circle" value="4">4</button></div>
+          <div><button class="circle" value="5">5</button></div>
+        </div>
+        <button id="submit-el">Submit</button>
+      </div>
+      <!-- <a href="pages/thankyou.html">Submit</a> -->
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jhann Erict Catabay Tinaza</a>.
+    </div>
 
-
- <div class="container">
-  <div id="card-el">
- <div class="max-width"><img class="circle star" src="images/icon-star.svg" alt=""> </div>
- <div class="max-width"> <h1 id="title-el"> How did we do?</h1>
- </div>
- <div class="max-width"> <p class="msg" id="description-el">Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!</p>
-</div>
-  <div id="rate-selector-el" class="rate-btns">
-  <div><button class="circle" value="1">1</button> </div>
-  <div><button class="circle" value="2">2</button></div>
-  <div><button class="circle" value="3">3</button> </div>
-  <div><button class="circle" value="4">4</button> </div>
- <div> <button class="circle" value="5">5</button></div>
-
-  </div>
- <button id="submit-el">Submit</button>
- </div>
- <!-- <a href="pages/thankyou.html">Submit</a> -->
-
-</div>
-</div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Jhann Erict Catabay Tinaza</a>.
-  </div>
-  
-  <script src="js/app.js"></script>
-</body>
+    <script src="js/app.js"></script>
+  </body>
 </html>
